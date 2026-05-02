@@ -28,6 +28,8 @@
             <span class="separator">|</span>
             <a href="#solution" class="nav-link">Solution</a>
             <span class="separator">|</span>
+            <a href="#solution-flow" class="nav-link">Flow</a>
+            <span class="separator">|</span>
             <a href="#team" class="nav-link">Team</a>
             <span class="separator">|</span>
             <a href="#contact" class="nav-link">Contact</a>
@@ -119,8 +121,84 @@
             </div>
         </section>
 
+        <!-- Solution Flow Section -->
+        <section id="solution-flow" class="section-container hidden bg-flow-section">
+            <div class="bg-overlay"></div>
+            <div class="content-wrapper">
+                <div class="section-header">
+                    <h2>> SOLUTION_FLOW</h2>
+                    <div class="animated-line"></div>
+                </div>
+                <div class="section-content flow-container">
+                    <div class="flow-block">
+                        <div class="flow-title">[ Impact Input ]</div>
+                        <div class="flow-desc">External force applied</div>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-block">
+                        <div class="flow-title">[ Ecoflex + TPU Layer ]</div>
+                        <div class="flow-desc">Distributes pressure</div>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-block">
+                        <div class="flow-title">[ Velostat Layer ]</div>
+                        <div class="flow-desc">Resistance changes under pressure</div>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-block">
+                        <div class="flow-title">[ Thread Grid (8×8) ]</div>
+                        <div class="flow-desc">Captures sensing points</div>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-block">
+                        <div class="flow-title">[ Voltage Divider ]</div>
+                        <div class="flow-desc">Converts resistance to voltage</div>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-block">
+                        <div class="flow-title">[ Arduino Mega ]</div>
+                        <div class="flow-desc">Reads signals and scans grid</div>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-block">
+                        <div class="flow-title">[ Serial Communication ]</div>
+                        <div class="flow-desc">Transmits data (115200 baud)</div>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-block">
+                        <div class="flow-title">[ Data Processing ]</div>
+                        <div class="flow-desc">Maps pressure values</div>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-block">
+                        <div class="flow-title">[ Heatmap Output ]</div>
+                        <div class="flow-desc">Displays real-time heatmap</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      
+
+        <!-- Working Principle Section -->
+        <section id="working-principle" class="section-container hidden">
+            <div class="section-header">
+                <h2>> WORKING_PRINCIPLE</h2>
+                <div class="animated-line"></div>
+            </div>
+            <div class="section-content terminal-list">
+                <div class="list-item"><span class="prompt">></span> Impact applied &rarr; Ecoflex layer deforms and distributes force across grid.</div>
+                <div class="list-item"><span class="prompt">></span> Velostat compresses &rarr; resistance decreases (~30k&Omega; to ~5k&Omega;).</div>
+                <div class="list-item"><span class="prompt">></span> Each node acts as variable resistor &rarr; converted to voltage via 10k&Omega; divider.</div>
+                <div class="list-item"><span class="prompt">></span> Arduino Mega scans rows sequentially &rarr; reads 64 sensing points.</div>
+                <div class="list-item"><span class="prompt">></span> Full scan completed in ~40 ms (~25 Hz) &rarr; real-time pressure mapping.</div>
+                <div class="list-item"><span class="prompt">></span> Filtered data sent via serial (115200 baud) &rarr; processed in Python.</div>
+                <br>
+                <div class="list-item"><span class="prompt">></span> Heatmap output:</div>
+                <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #4da6ff;">[BLUE]</span> = low pressure</div>
+                <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #ffff4d;">[GREEN/YELLOW]</span> = medium</div>
+                <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #ff4d4d;">[RED]</span> = high pressure</div>
+            </div>
+        </section>
         <!-- Features Section -->
         <section id="features" class="section-container hidden">
             <div class="section-header">
