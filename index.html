@@ -192,11 +192,18 @@
                 <div class="list-item"><span class="prompt">></span> Arduino Mega scans rows sequentially &rarr; reads 64 sensing points.</div>
                 <div class="list-item"><span class="prompt">></span> Full scan completed in ~40 ms (~25 Hz) &rarr; real-time pressure mapping.</div>
                 <div class="list-item"><span class="prompt">></span> Filtered data sent via serial (115200 baud) &rarr; processed in Python.</div>
-                <br>
-                <div class="list-item"><span class="prompt">></span> Heatmap output:</div>
-                <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #4da6ff;">[BLUE]</span> = low pressure</div>
-                <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #ffff4d;">[GREEN/YELLOW]</span> = medium</div>
-                <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #ff4d4d;">[RED]</span> = high pressure</div>
+                <div class="heatmap-split-layout">
+                    <div class="heatmap-text">
+                        <div class="list-item"><span class="prompt">></span> Heatmap output:</div>
+                        <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #4da6ff;">[BLUE]</span> = low pressure</div>
+                        <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #ffff4d;">[GREEN/YELLOW]</span> = medium</div>
+                        <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #ff4d4d;">[RED]</span> = high pressure</div>
+                    </div>
+                    <div class="heatmap-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="Heatmap Representation" class="heatmap-img">
+                        <div class="heatmap-overlay"></div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- Features Section -->
