@@ -104,27 +104,51 @@
             </div>
         </section>
 
-
-
-        <!-- Working Principle Section -->
-        <section id="working-principle" class="section-container hidden">
+        <!-- Technology Section -->
+        <section id="technology" class="section-container hidden">
             <div class="section-header">
-                <h2>> SYSTEM_LOG: WORKING_PRINCIPLE</h2>
+                <h2>> TECHNOLOGY</h2>
                 <div class="animated-line"></div>
             </div>
-            <div class="section-content terminal-box">
-                <div class="terminal-header">
-                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                    <span class="terminal-title">bash - tactiskin_core</span>
-                </div>
-                <div class="terminal-body">
-                    <p id="log-text"></p><span class="cursor-blink log-cursor">_</span>
+            <div class="section-content">
+                <p class="highlight-text" style="margin-bottom: 2rem;">
+                    Layered smart textile sensing system combining flexible materials, embedded electronics, and real-time data processing.
+                </p>
+                <div class="terminal-list">
+                    <div class="list-item"><span class="prompt">></span> Ecoflex 00-30 + TPU coating &rarr; flexible impact-distributing surface</div>
+                    <div class="list-item"><span class="prompt">></span> Velostat film &rarr; piezoresistive sensing (30k&Omega; to 5k&Omega; under pressure)</div>
+                    <div class="list-item"><span class="prompt">></span> 8&times;8 conductive thread grid &rarr; localized pressure detection</div>
+                    <div class="list-item"><span class="prompt">></span> 10k&Omega; voltage divider &rarr; resistance-to-voltage conversion</div>
+                    <div class="list-item"><span class="prompt">></span> 0.1&micro;F capacitors &rarr; noise filtering</div>
+                    <div class="list-item"><span class="prompt">></span> Arduino Mega (ATmega2560) &rarr; row-wise scanning + ADC</div>
+                    <div class="list-item"><span class="prompt">></span> Serial communication (115200 baud) &rarr; data transfer</div>
+                    <div class="list-item"><span class="prompt">></span> Python (Matplotlib) &rarr; real-time heatmap visualization</div>
+                    <div class="list-item"><span class="prompt">></span> PET + Kapton layers &rarr; electrical insulation</div>
+                    <div class="list-item"><span class="prompt">></span> Neoprene base (3mm) &rarr; structural support</div>
                 </div>
             </div>
         </section>
 
-
-
+        <!-- Working Principle Section -->
+        <section id="working-principle" class="section-container hidden">
+            <div class="section-header">
+                <h2>> WORKING_PRINCIPLE</h2>
+                <div class="animated-line"></div>
+            </div>
+            <div class="section-content terminal-list">
+                <div class="list-item"><span class="prompt">></span> Impact applied &rarr; Ecoflex layer deforms and distributes force across grid.</div>
+                <div class="list-item"><span class="prompt">></span> Velostat compresses &rarr; resistance decreases (~30k&Omega; to ~5k&Omega;).</div>
+                <div class="list-item"><span class="prompt">></span> Each node acts as variable resistor &rarr; converted to voltage via 10k&Omega; divider.</div>
+                <div class="list-item"><span class="prompt">></span> Arduino Mega scans rows sequentially &rarr; reads 64 sensing points.</div>
+                <div class="list-item"><span class="prompt">></span> Full scan completed in ~40 ms (~25 Hz) &rarr; real-time pressure mapping.</div>
+                <div class="list-item"><span class="prompt">></span> Filtered data sent via serial (115200 baud) &rarr; processed in Python.</div>
+                <br>
+                <div class="list-item"><span class="prompt">></span> Heatmap output:</div>
+                <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #4da6ff;">[BLUE]</span> = low pressure</div>
+                <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #ffff4d;">[GREEN/YELLOW]</span> = medium</div>
+                <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #ff4d4d;">[RED]</span> = high pressure</div>
+            </div>
+        </section>
         <!-- Features Section -->
         <section id="features" class="section-container hidden">
             <div class="section-header">
