@@ -139,6 +139,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
                 
+                // Trigger sequential animation for Flow Section
+                if (entry.target.id === 'solution-flow') {
+                    const flowItems = entry.target.querySelectorAll('.flow-block, .flow-arrow');
+                    flowItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('flow-visible');
+                            // Add active glow briefly to blocks
+                            if(item.classList.contains('flow-block')) {
+                                item.classList.add('active-glow');
+                                setTimeout(() => {
+                                    item.classList.remove('active-glow');
+                                }, 800);
+                            }
+                        }, index * 400); // 400ms delay between each element
+                    });
+                }
+                
                 // Unobserve once visible
                 observer.unobserve(entry.target);
             }
