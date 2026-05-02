@@ -196,6 +196,87 @@ main {
     position: relative; /* ensure overlay covers */
 }
 
+.bg-flow-section {
+    background-image: url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border: 1px solid var(--dark-green);
+    border-radius: 8px;
+    margin: 4rem auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Solution Flow Styles */
+.flow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 2rem 0;
+}
+
+.flow-block, .flow-arrow {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.flow-block.flow-visible, .flow-arrow.flow-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.flow-block {
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid var(--dark-green);
+    border-radius: 6px;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.flow-block:hover {
+    border-color: var(--text-color);
+    box-shadow: 0 0 20px var(--glow-color);
+    background: rgba(26, 51, 0, 0.4);
+}
+
+.flow-title {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.flow-desc {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.flow-arrow {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-shadow: 0 0 8px var(--glow-color);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+}
+
+.flow-block.active-glow {
+    border-color: var(--text-color);
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
 .bg-overlay {
     position: absolute;
     top: 0;
