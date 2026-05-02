@@ -184,6 +184,18 @@ main {
     overflow: hidden;
 }
 
+.bg-solution-section {
+    background-image: url('electronics_lab.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border: 1px solid var(--dark-green);
+    border-radius: 8px;
+    margin: 4rem auto;
+    overflow: hidden;
+    position: relative; /* ensure overlay covers */
+}
+
 .bg-overlay {
     position: absolute;
     top: 0;
@@ -437,6 +449,44 @@ main {
     font-weight: bold;
 }
 
+/* Typing Effect Styles */
+.type-line {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.type-line.active {
+    opacity: 1;
+}
+
+.type-line .typing-text {
+    text-shadow: 0 0 5px var(--glow-color);
+    transition: all 0.3s ease;
+}
+
+.type-line.done .typing-text {
+    animation: textFlicker 4s infinite alternate;
+}
+
+.type-line:hover .typing-text {
+    text-shadow: 0 0 15px var(--text-color);
+    color: #fff;
+}
+
+.type-cursor {
+    display: none;
+}
+
+.type-line.typing .type-cursor {
+    display: inline-block;
+}
+
+@keyframes textFlicker {
+    0%, 100% { opacity: 1; text-shadow: 0 0 5px var(--glow-color); }
+    50% { opacity: 0.8; text-shadow: 0 0 2px var(--glow-color); }
+    75% { opacity: 0.9; text-shadow: 0 0 8px var(--glow-color); }
+}
+
 /* Technology Grid */
 .tech-image-grid {
     display: grid;
@@ -468,6 +518,41 @@ main {
     font-size: 0.95rem !important;
     line-height: 1.6;
     margin-bottom: 0 !important;
+}
+
+/* Tech Specs Grid */
+.tech-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.spec-card {
+    border: 1px solid var(--dark-green);
+    background: rgba(26, 51, 0, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.spec-icon {
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.spec-text {
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.spec-card:hover .spec-icon {
+    text-shadow: 0 0 10px var(--text-color);
 }
 
 /* Terminal Box (Working Principle) */
