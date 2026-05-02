@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // Terminal Typing Effect for Problem Section
+    // Terminal Typing Effect for Sections
     let problemStarted = false;
+    let aboutStarted = false;
 
     function startTypingSequence(container) {
         const lines = container.querySelectorAll('.type-line');
@@ -116,6 +117,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     const problemList = document.getElementById('problem-list');
                     if (problemList) {
                         setTimeout(() => startTypingSequence(problemList), 300);
+                    }
+                }
+                
+                // Trigger sequential typing for About Section
+                if (entry.target.id === 'about' && !aboutStarted) {
+                    aboutStarted = true;
+                    const aboutList = document.getElementById('about-list');
+                    if (aboutList) {
+                        setTimeout(() => startTypingSequence(aboutList), 300);
                     }
                 }
                 
