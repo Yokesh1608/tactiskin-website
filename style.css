@@ -13,6 +13,7 @@
 }
 
 * {
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -185,7 +186,7 @@ main {
 }
 
 .bg-solution-section {
-    background-image: url('electronics_lab.png');
+    background-image: url('heatmap_data.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -197,7 +198,7 @@ main {
 }
 
 .bg-flow-section {
-    background-image: url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0');
+    background-image: url('arduino_mega.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
