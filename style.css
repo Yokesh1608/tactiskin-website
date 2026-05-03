@@ -175,7 +175,7 @@ main {
 
 /* Background Section (Problem) */
 .bg-section {
-    background-image: url('crash_test_dummy.png');
+    background-image: url('https://source.unsplash.com/1920x1080/?automotive%20crash%20test%20dummy%20laboratory');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -183,10 +183,11 @@ main {
     border-radius: 8px;
     margin: 4rem auto;
     overflow: hidden;
+    position: relative;
 }
 
 .bg-solution-section {
-    background-image: url('heatmap_data.png');
+    background-image: url('https://source.unsplash.com/1920x1080/?smart%20textile%20sensor%20grid%20flexible%20electronics');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -198,7 +199,7 @@ main {
 }
 
 .bg-flow-section {
-    background-image: url('arduino_mega.png');
+    background-image: url('https://source.unsplash.com/1920x1080/?data%20processing%20visualization%20futuristic%20system%20diagram');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -206,6 +207,43 @@ main {
     border-radius: 8px;
     margin: 4rem auto;
     overflow: hidden;
+    position: relative;
+}
+
+#about,
+#features,
+#team,
+#contact,
+#working-principle {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#about {
+    background-image: url('https://source.unsplash.com/1920x1080/?flexible%20electronics%20wearable%20sensor%20technology%20closeup');
+}
+
+#features {
+    background-image: url('https://source.unsplash.com/1920x1080/?arduino%20board%20macro%20dark%20neon%20circuit');
+}
+
+#working-principle {
+    background-image: url('https://source.unsplash.com/1920x1080/?data%20processing%20visualization%20futuristic%20system%20diagram');
+}
+
+#team {
+    background-image: url('https://source.unsplash.com/1920x1080/?dark%20minimal%20tech%20background%20grid%20dots');
+}
+
+#contact {
+    background-image: url('https://source.unsplash.com/1920x1080/?abstract%20dark%20technology%20background%20particles%20glow');
+}
+
+.heatmap-section {
+    background-image: url('https://source.unsplash.com/1920x1080/?thermal%20heatmap%20visualization%20scientific%20gradient%20earth');
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 
@@ -284,7 +322,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.85); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
     z-index: 1;
 }
 
@@ -297,7 +335,7 @@ main {
 .wix-hero {
     position: relative;
     overflow: hidden;
-    background-image: url('electronics_lab.png');
+    background-image: url('https://source.unsplash.com/1920x1080/?dark%20electronics%20lab%20multiple%20monitors%20engineer');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -596,6 +634,41 @@ main {
     to {
         box-shadow: 0 24px 70px rgba(0, 255, 0, 0.3), inset 0 0 45px rgba(0, 255, 0, 0.14);
     }
+}
+
+#hero::before,
+#about::before,
+#problem::before,
+#solution::before,
+#features::before,
+#solution-flow::before,
+#working-principle::before,
+#team::before,
+#contact::before,
+.heatmap-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    z-index: 0;
+}
+
+#problem::before {
+    background: linear-gradient(180deg, rgba(120, 0, 0, 0.28), rgba(0, 0, 0, 0.6));
+}
+
+#solution::before {
+    background: linear-gradient(180deg, rgba(0, 120, 0, 0.24), rgba(0, 0, 0, 0.6));
+}
+
+#solution-flow::before,
+#working-principle::before {
+    background: linear-gradient(180deg, rgba(10, 40, 80, 0.22), rgba(0, 0, 0, 0.6));
+}
+
+.heatmap-section::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.72));
 }
 
 @media (max-width: 950px) {
