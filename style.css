@@ -175,7 +175,7 @@ main {
 
 /* Background Section (Problem) */
 .bg-section {
-    background-image: url('https://source.unsplash.com/1920x1080/?automotive%20crash%20test%20dummy%20laboratory');
+    background-image: url('images/problem.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -187,7 +187,7 @@ main {
 }
 
 .bg-solution-section {
-    background-image: url('https://source.unsplash.com/1920x1080/?smart%20textile%20sensor%20grid%20flexible%20electronics');
+    background-image: url('images/solution.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -198,8 +198,9 @@ main {
     position: relative; /* ensure overlay covers */
 }
 
-.bg-flow-section {
-    background-image: url('https://source.unsplash.com/1920x1080/?data%20processing%20visualization%20futuristic%20system%20diagram');
+.bg-flow-section,
+#flow {
+    background-image: url('images/flow.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -214,37 +215,48 @@ main {
 #features,
 #team,
 #contact,
-#working-principle {
+#working-principle,
+#hero,
+#solution,
+#solution-flow,
+#heatmap,
+.heatmap-section {
     background-size: cover;
     background-position: center;
     position: relative;
+}
+
+#hero {
+    background-image: url('images/hero.jpg');
 }
 
 #about {
-    background-image: url('https://source.unsplash.com/1920x1080/?flexible%20electronics%20wearable%20sensor%20technology%20closeup');
+    background-image: url('images/about.jpg');
 }
 
-#features {
-    background-image: url('https://source.unsplash.com/1920x1080/?arduino%20board%20macro%20dark%20neon%20circuit');
+#problem {
+    background-image: url('images/problem.jpg');
 }
 
-#working-principle {
-    background-image: url('https://source.unsplash.com/1920x1080/?data%20processing%20visualization%20futuristic%20system%20diagram');
+#solution {
+    background-image: url('images/solution.jpg');
+}
+
+#solution-flow {
+    background-image: url('images/flow.jpg');
+}
+
+#heatmap,
+.heatmap-section {
+    background-image: url('images/heatmap.jpg');
 }
 
 #team {
-    background-image: url('https://source.unsplash.com/1920x1080/?dark%20minimal%20tech%20background%20grid%20dots');
+    background-image: url('images/team.jpg');
 }
 
 #contact {
-    background-image: url('https://source.unsplash.com/1920x1080/?abstract%20dark%20technology%20background%20particles%20glow');
-}
-
-.heatmap-section {
-    background-image: url('https://source.unsplash.com/1920x1080/?thermal%20heatmap%20visualization%20scientific%20gradient%20earth');
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    background-image: url('images/contact.jpg');
 }
 
 /* Solution Flow Styles */
@@ -335,7 +347,7 @@ main {
 .wix-hero {
     position: relative;
     overflow: hidden;
-    background-image: url('https://source.unsplash.com/1920x1080/?dark%20electronics%20lab%20multiple%20monitors%20engineer');
+    background-image: url('images/hero.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -645,6 +657,7 @@ main {
 #working-principle::before,
 #team::before,
 #contact::before,
+#heatmap::before,
 .heatmap-section::before {
     content: "";
     position: absolute;
@@ -663,10 +676,12 @@ main {
 }
 
 #solution-flow::before,
-#working-principle::before {
+#working-principle::before,
+#flow::before {
     background: linear-gradient(180deg, rgba(10, 40, 80, 0.22), rgba(0, 0, 0, 0.6));
 }
 
+#heatmap::before,
 .heatmap-section::before {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.72));
 }
