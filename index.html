@@ -118,6 +118,23 @@
                     <div class="list-item type-line" data-text="Python-based system generates real-time heatmap visualization."><span class="prompt">></span> <span class="typing-text"></span><span class="cursor-blink type-cursor">_</span></div>
                     <div class="list-item type-line" data-text="Enables accurate detection of impact zones for crash and SHARP testing."><span class="prompt">></span> <span class="typing-text"></span><span class="cursor-blink type-cursor">_</span></div>
                 </div>
+                <div class="heatmap-section fade-in-scroll">
+                    <div class="heatmap-text">
+                        <h3>HEATMAP_VISUALIZATION</h3>
+                        <p>Real-time pressure distribution mapped using sensor grid data.</p>
+                        <p>Color gradient representation:</p>
+                        <div class="heatmap-key">
+                            <span><strong>BLUE</strong> → Low pressure</span>
+                            <span><strong>GREEN</strong> → Medium</span>
+                            <span><strong>YELLOW</strong> → Moderate</span>
+                            <span><strong>RED</strong> → High pressure</span>
+                        </div>
+                        <p>Enables clear identification of impact zones and force concentration.</p>
+                    </div>
+                    <div class="heatmap-image-wrapper">
+                        <img src="./heatmap_data.png" alt="Pressure heatmap visualization" class="heatmap-img">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -192,16 +209,15 @@
                 <div class="list-item"><span class="prompt">></span> Arduino Mega scans rows sequentially &rarr; reads 64 sensing points.</div>
                 <div class="list-item"><span class="prompt">></span> Full scan completed in ~40 ms (~25 Hz) &rarr; real-time pressure mapping.</div>
                 <div class="list-item"><span class="prompt">></span> Filtered data sent via serial (115200 baud) &rarr; processed in Python.</div>
-                <div class="heatmap-split-layout">
-                    <div class="heatmap-text">
-                        <div class="list-item"><span class="prompt">></span> Heatmap output:</div>
-                        <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #4da6ff;">[BLUE]</span> = low pressure</div>
-                        <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #ffff4d;">[GREEN/YELLOW]</span> = medium</div>
-                        <div class="list-item" style="padding-left: 2rem;"><span class="prompt" style="color: #ff4d4d;">[RED]</span> = high pressure</div>
+                <div class="smooth-heatmap-container">
+                    <div class="smooth-heatmap-labels">
+                        <div class="hm-label"><span class="hm-color-box" style="background: var(--hm-blue); box-shadow: 0 0 8px var(--hm-blue);"></span> BLUE = Low Pressure</div>
+                        <div class="hm-label"><span class="hm-color-box" style="background: var(--hm-green); box-shadow: 0 0 8px var(--hm-green);"></span> GREEN = Medium Pressure</div>
+                        <div class="hm-label"><span class="hm-color-box" style="background: var(--hm-yellow); box-shadow: 0 0 8px var(--hm-yellow);"></span> YELLOW = Moderate Pressure</div>
+                        <div class="hm-label"><span class="hm-color-box" style="background: var(--hm-red); box-shadow: 0 0 8px var(--hm-red);"></span> RED = High Pressure</div>
                     </div>
-                    <div class="heatmap-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="Heatmap Representation" class="heatmap-img">
-                        <div class="heatmap-overlay"></div>
+                    <div class="smooth-heatmap-visual">
+                        <div class="smooth-heatmap-canvas"></div>
                     </div>
                 </div>
             </div>
