@@ -28,8 +28,6 @@
             <span class="separator">|</span>
             <a href="#solution" class="nav-link">Solution</a>
             <span class="separator">|</span>
-            <a href="#solution-flow" class="nav-link">Flow</a>
-            <span class="separator">|</span>
             <a href="#team" class="nav-link">Team</a>
             <span class="separator">|</span>
             <a href="#contact" class="nav-link">Contact</a>
@@ -39,23 +37,25 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="full-screen wix-hero">
-            <div class="hero-bg-grid"></div>
-            <div class="hero-overlay"></div>
+            <div class="hero-bg-gradient"></div>
+            <div class="hero-particles"></div>
             
             <div class="hero-content-wrapper">
                 <div class="hero-content wix-hero-content">
-                    <div class="hero-glow"></div>
-                    <h1 class="wix-hero-title fade-in-up">Revolutionizing Impact Analysis</h1>
-                    <p class="wix-hero-subtitle fade-in-up delay-1">Smart Textile Skin for Real-Time Pressure Mapping and SHARP Crash Test Analysis</p>
-                    <div class="fade-in-up delay-2">
-                        <a href="#features" class="hero-btn">Explore Features</a>
+                    <div class="hero-glow-container">
+                        <div class="hero-glow"></div>
                     </div>
+                    <h1 class="wix-hero-title">
+                        <span class="hero-word">Revolutionizing</span>
+                        <span class="hero-word">Impact</span>
+                        <span class="hero-word">Analysis</span>
+                    </h1>
+                    <p class="wix-hero-subtitle">Smart Textile Skin for Real-Time Pressure Mapping and SHARP Crash Test Analysis</p>
+                    <a href="#features" class="hero-btn">Explore Features</a>
                 </div>
 
-                <!-- Hero Visual Matrix (Right Side) -->
-                <div class="hero-visual-matrix">
-                    <!-- JS will populate 64 cells here -->
-                </div>
+                <!-- Hero Visual Element -->
+                <div class="hero-visual-accent"></div>
             </div>
 
             <div class="scroll-indicator">
@@ -138,62 +138,6 @@
             </div>
         </section>
 
-        <!-- Solution Flow Section -->
-        <section id="solution-flow" class="section-container hidden bg-flow-section">
-            <div class="bg-overlay"></div>
-            <div class="content-wrapper">
-                <div class="section-header">
-                    <h2>> SOLUTION_FLOW</h2>
-                    <div class="animated-line"></div>
-                </div>
-                <div class="section-content flow-container">
-                    <div class="flow-block">
-                        <div class="flow-title">[ Impact Input ]</div>
-                        <div class="flow-desc">External force applied</div>
-                    </div>
-                    <div class="flow-arrow">↓</div>
-                    <div class="flow-block">
-                        <div class="flow-title">[ Ecoflex + TPU Layer ]</div>
-                        <div class="flow-desc">Distributes pressure</div>
-                    </div>
-                    <div class="flow-arrow">↓</div>
-                    <div class="flow-block">
-                        <div class="flow-title">[ Velostat Layer ]</div>
-                        <div class="flow-desc">Resistance changes under pressure</div>
-                    </div>
-                    <div class="flow-arrow">↓</div>
-                    <div class="flow-block">
-                        <div class="flow-title">[ Thread Grid (8×8) ]</div>
-                        <div class="flow-desc">Captures sensing points</div>
-                    </div>
-                    <div class="flow-arrow">↓</div>
-                    <div class="flow-block">
-                        <div class="flow-title">[ Voltage Divider ]</div>
-                        <div class="flow-desc">Converts resistance to voltage</div>
-                    </div>
-                    <div class="flow-arrow">↓</div>
-                    <div class="flow-block">
-                        <div class="flow-title">[ Arduino Mega ]</div>
-                        <div class="flow-desc">Reads signals and scans grid</div>
-                    </div>
-                    <div class="flow-arrow">↓</div>
-                    <div class="flow-block">
-                        <div class="flow-title">[ Serial Communication ]</div>
-                        <div class="flow-desc">Transmits data (115200 baud)</div>
-                    </div>
-                    <div class="flow-arrow">↓</div>
-                    <div class="flow-block">
-                        <div class="flow-title">[ Data Processing ]</div>
-                        <div class="flow-desc">Maps pressure values</div>
-                    </div>
-                    <div class="flow-arrow">↓</div>
-                    <div class="flow-block">
-                        <div class="flow-title">[ Heatmap Output ]</div>
-                        <div class="flow-desc">Displays real-time heatmap</div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
 
         <!-- Working Principle Section -->
