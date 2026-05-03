@@ -63,41 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         typeNextLine();
     }
-
-    // Hero Visual Matrix Animation
-    const heroMatrix = document.querySelector('.hero-visual-matrix');
-    if (heroMatrix) {
-        const matrixCells = [];
-        for (let i = 0; i < 64; i++) {
-            const cell = document.createElement('div');
-            cell.className = 'hero-matrix-cell';
-            heroMatrix.appendChild(cell);
-            matrixCells.push(cell);
-        }
-
-        function animateHeroMatrix() {
-            // Fade out randomly
-            matrixCells.forEach(cell => {
-                if (Math.random() < 0.1) {
-                    cell.style.backgroundColor = 'rgba(166, 255, 0, 0.02)';
-                    cell.style.boxShadow = 'none';
-                }
-            });
-
-            // Light up random cells (soft glow)
-            const numActive = Math.floor(Math.random() * 3) + 1;
-            for (let i = 0; i < numActive; i++) {
-                const index = Math.floor(Math.random() * 64);
-                const color = 'rgba(166, 255, 0, 0.3)';
-                matrixCells[index].style.backgroundColor = color;
-                matrixCells[index].style.boxShadow = `0 0 10px ${color}`;
-            }
-
-            setTimeout(animateHeroMatrix, 200); // Gentle updates
-        }
-        
-        animateHeroMatrix();
-    }
+    // Hero animations are handled by CSS keyframes now
 
     // Intersection Observer for scroll fade-ins
     const observerOptions = {
@@ -139,22 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
                 
-                // Trigger sequential animation for Flow Section
-                if (entry.target.id === 'solution-flow') {
-                    const flowItems = entry.target.querySelectorAll('.flow-block, .flow-arrow');
-                    flowItems.forEach((item, index) => {
-                        setTimeout(() => {
-                            item.classList.add('flow-visible');
-                            // Add active glow briefly to blocks
-                            if(item.classList.contains('flow-block')) {
-                                item.classList.add('active-glow');
-                                setTimeout(() => {
-                                    item.classList.remove('active-glow');
-                                }, 800);
-                            }
-                        }, index * 400); // 400ms delay between each element
-                    });
-                }
                 
                 // Unobserve once visible
                 observer.unobserve(entry.target);
