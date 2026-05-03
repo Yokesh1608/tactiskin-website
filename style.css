@@ -1095,7 +1095,19 @@ main {
     transition: all 0.3s ease;
 }
 
-.team-card:hover .avatar-placeholder {
+.team-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--dark-green);
+    object-fit: cover;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.team-card:hover .avatar-placeholder,
+.team-card:hover .team-avatar {
     border-color: var(--text-color);
     box-shadow: 0 0 10px rgba(166, 255, 0, 0.4);
 }
