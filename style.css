@@ -198,19 +198,6 @@ main {
     position: relative; /* ensure overlay covers */
 }
 
-.bg-flow-section,
-#flow {
-    background-image: url('images/flow.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    border: 1px solid var(--dark-green);
-    border-radius: 8px;
-    margin: 4rem auto;
-    overflow: hidden;
-    position: relative;
-}
-
 #about,
 #features,
 #team,
@@ -218,7 +205,6 @@ main {
 #working-principle,
 #hero,
 #solution,
-#solution-flow,
 #heatmap,
 .heatmap-section {
     background-size: cover;
@@ -240,10 +226,6 @@ main {
 
 #solution {
     background-image: url('images/solution.jpg');
-}
-
-#solution-flow {
-    background-image: url('images/flow.jpg');
 }
 
 #heatmap,
@@ -347,45 +329,67 @@ main {
 .wix-hero {
     position: relative;
     overflow: hidden;
-    background-image: url('images/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: linear-gradient(135deg, #000000 0%, #0a1a3a 40%, #1a0a3a 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.hero-bg-grid {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background-image: 
-        linear-gradient(rgba(166, 255, 0, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(166, 255, 0, 0.1) 1px, transparent 1px);
-    background-size: 40px 40px;
-    z-index: 0;
-    opacity: 0.08; /* 5-10% opacity */
-    animation: gridMoveSlow 30s linear infinite;
-    transform: perspective(500px) rotateX(60deg) translateY(-100px) translateZ(-200px);
-}
-
-@keyframes gridMoveSlow {
-    0% { transform: perspective(500px) rotateX(60deg) translateY(0) translateZ(-200px); }
-    100% { transform: perspective(500px) rotateX(60deg) translateY(40px) translateZ(-200px); }
-}
-
-.hero-overlay {
+.hero-bg-gradient {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.75);
+    background: linear-gradient(135deg, transparent 0%, rgba(10, 26, 58, 0.3) 40%, rgba(26, 10, 58, 0.2) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 1;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.hero-particles::before,
+.hero-particles::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(166, 255, 0, 0.6);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero-particles::before {
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.hero-particles::after {
+    top: 70%;
+    right: 20%;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(-30px) translateX(20px);
+        opacity: 0.8;
+    }
 }
 
 .hero-content-wrapper {
@@ -397,91 +401,145 @@ main {
     width: 100%;
     max-width: 1200px;
     padding: 0 2rem;
+    gap: 4rem;
 }
 
-.hero-glow {
+.hero-glow-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    height: 150%;
-    background: radial-gradient(circle, rgba(166, 255, 0, 0.15) 0%, transparent 60%);
-    filter: blur(40px);
-    z-index: -1;
+    z-index: 0;
+}
+
+.hero-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(166, 255, 0, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
     pointer-events: none;
 }
 
 .wix-hero-content {
     position: relative;
     z-index: 2;
-    max-width: 900px;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.5rem; /* Increased spacing */
+    gap: 1.5rem;
 }
 
 .wix-hero-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: -1px;
     color: #fff;
-    text-shadow: 0 0 20px rgba(166, 255, 0, 0.3);
+    text-shadow: 0 0 30px rgba(166, 255, 0, 0.2);
     margin-bottom: 0.5rem;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hero-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(60px);
+    animation: heroWordFadeUp 1s ease-out forwards;
+}
+
+.hero-word:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.hero-word:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.hero-word:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes heroWordFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .wix-hero-subtitle {
-    font-size: 1.2rem;
-    color: #ccc;
+    font-size: 1.25rem;
+    color: #b8d4ff;
     line-height: 1.6;
-    max-width: 700px;
-    margin-bottom: 2rem;
+    max-width: 600px;
+    margin: 0;
+    opacity: 0;
+    animation: heroSubtitleFade 1s ease-out 0.6s forwards;
+}
+
+@keyframes heroSubtitleFade {
+    to {
+        opacity: 1;
+    }
 }
 
 .hero-btn {
     display: inline-block;
-    padding: 1rem 2.5rem;
-    font-size: 1.1rem;
-    font-weight: bold;
+    padding: 1rem 2.8rem;
+    font-size: 1rem;
+    font-weight: 700;
     color: #000;
     background-color: var(--text-color);
-    border: none;
+    border: 2px solid var(--text-color);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(166, 255, 0, 0.2);
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 30px rgba(166, 255, 0, 0.3);
+    cursor: pointer;
+    margin-top: 1rem;
+    opacity: 0;
+    animation: heroButtonFade 1s ease-out 0.75s forwards;
+}
+
+@keyframes heroButtonFade {
+    to {
+        opacity: 1;
+    }
 }
 
 .hero-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(166, 255, 0, 0.6);
+    transform: scale(1.08);
+    box-shadow: 0 0 50px rgba(166, 255, 0, 0.6), inset 0 0 20px rgba(166, 255, 0, 0.1);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Right Side Visual Matrix */
-.hero-visual-matrix {
+.hero-visual-accent {
     position: absolute;
-    right: 5vw;
-    top: 50%;
-    transform: translateY(-50%);
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    gap: 3px;
-    width: 20vw;
-    max-width: 250px;
-    height: 20vw;
-    max-height: 250px;
-    z-index: 1;
+    width: 400px;
+    height: 400px;
+    right: -100px;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(166, 255, 0, 0.05), rgba(166, 255, 0, 0.02));
+    border: 1px solid rgba(166, 255, 0, 0.1);
+    border-radius: 30px;
+    transform: rotate(15deg);
     opacity: 0.3;
+    animation: floatAccent 8s ease-in-out infinite;
 }
 
-.hero-matrix-cell {
-    background-color: rgba(166, 255, 0, 0.02);
-    border: 1px solid rgba(166, 255, 0, 0.05);
-    transition: background-color 0.6s ease, box-shadow 0.6s ease;
+@keyframes floatAccent {
+    0%, 100% {
+        transform: rotate(15deg) translateY(0);
+    }
+    50% {
+        transform: rotate(15deg) translateY(-30px);
+    }
 }
 
 
@@ -653,7 +711,6 @@ main {
 #problem::before,
 #solution::before,
 #features::before,
-#solution-flow::before,
 #working-principle::before,
 #team::before,
 #contact::before,
@@ -675,9 +732,7 @@ main {
     background: linear-gradient(180deg, rgba(0, 120, 0, 0.24), rgba(0, 0, 0, 0.6));
 }
 
-#solution-flow::before,
-#working-principle::before,
-#flow::before {
+#working-principle::before {
     background: linear-gradient(180deg, rgba(10, 40, 80, 0.22), rgba(0, 0, 0, 0.6));
 }
 
