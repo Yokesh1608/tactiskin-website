@@ -1,11 +1,11 @@
 // Scroll reveal animation
 function revealOnScroll() {
-    const elements = document.querySelectorAll('.section-content, .feature-item, .problem-point, .solution-feature, .flow-step, .team-member');
+    const elements = document.querySelectorAll('.card, .section h2, .section p');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in', 'animate');
+                entry.target.classList.add('fade-in');
             }
         });
     }, {
@@ -28,7 +28,7 @@ function smoothScroll() {
             const targetSection = document.querySelector(targetId);
 
             if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
+                const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
@@ -51,29 +51,9 @@ function navbarScrollEffect() {
     });
 }
 
-// Floating animation for hero visual
-function floatingAnimation() {
-    const floatingGrid = document.querySelector('.floating-grid');
-
-    if (floatingGrid) {
-        setInterval(() => {
-            floatingGrid.style.transform = `translateY(${Math.sin(Date.now() / 1000) * 10}px)`;
-        }, 50);
-    }
-}
-
 // Initialize all functions when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     revealOnScroll();
     smoothScroll();
     navbarScrollEffect();
-    floatingAnimation();
-});
-
-// Add loading animation for hero elements
-window.addEventListener('load', () => {
-    const heroSection = document.querySelector('.hero-section');
-    if (heroSection) {
-        heroSection.style.opacity = '1';
-    }
 });
