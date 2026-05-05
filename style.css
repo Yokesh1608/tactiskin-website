@@ -286,24 +286,48 @@ body {
 /* ===== TEAM ===== */
 .team-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
 .team-card { padding: 36px 28px; text-align: center; }
-.team-avatar {
-  width: 80px; height: 80px; border-radius: 50%;
+
+/* ===== TEAM AVATAR SYSTEM ===== */
+.team-avatar-wrap {
+  width: 110px; height: 110px;
+  margin: 0 auto 20px;
+  position: relative;
+}
+.team-photo {
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border: 3px solid #0EA5E9;
+  box-shadow: 0 6px 24px rgba(14,165,233,0.20);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-avatar-fb {
+  width: 110px; height: 110px;
+  border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Poppins',sans-serif; font-weight: 700; font-size: 1.4rem; color: #fff;
-  margin: 0 auto 20px; position: relative;
+  font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.5rem;
+  color: #fff; letter-spacing: 1px;
+  border: 3px solid rgba(255,255,255,0.4);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-card:hover .team-photo,
+.team-card:hover .team-avatar-fb {
+  transform: scale(1.08);
+  box-shadow: 0 12px 36px rgba(14,165,233,0.30);
+}
+/* Legacy .team-avatar (safety fallback) */
+.team-avatar {
+  width: 110px; height: 110px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.5rem;
+  color: #fff; margin: 0 auto 20px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   transition: transform 0.3s;
 }
-.team-card:hover .team-avatar { transform: scale(1.1); }
-.team-photo {
-  width: 80px; height: 80px; border-radius: 50%;
-  object-fit: cover; object-position: center top;
-  display: block; margin: 0 auto 20px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  border: 3px solid var(--primary-light);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.team-card:hover .team-photo { transform: scale(1.1); box-shadow: 0 12px 32px rgba(14,165,233,0.3); border-color: var(--primary); }
+.team-card:hover .team-avatar { transform: scale(1.08); }
 .team-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
 .team-role {
   display: inline-block; padding: 4px 14px; border-radius: 50px;
