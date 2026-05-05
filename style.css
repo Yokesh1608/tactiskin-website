@@ -295,6 +295,15 @@ body {
   transition: transform 0.3s;
 }
 .team-card:hover .team-avatar { transform: scale(1.1); }
+.team-photo {
+  width: 80px; height: 80px; border-radius: 50%;
+  object-fit: cover; object-position: center top;
+  display: block; margin: 0 auto 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  border: 3px solid var(--primary-light);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.team-card:hover .team-photo { transform: scale(1.1); box-shadow: 0 12px 32px rgba(14,165,233,0.3); border-color: var(--primary); }
 .team-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
 .team-role {
   display: inline-block; padding: 4px 14px; border-radius: 50px;
