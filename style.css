@@ -339,21 +339,7 @@ body {
 .team-role.designer { background: rgba(217,119,6,0.12); color: #D97706; }
 .team-card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; }
 
-/* ===== CONTACT ===== */
-.contact-wrapper { max-width: 720px; margin: 48px auto 0; }
-.contact-form { padding: 48px; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
-.form-group label { font-size: 0.88rem; font-weight: 600; color: var(--text); }
-.form-group input, .form-group textarea {
-  padding: 13px 18px; border-radius: var(--radius-sm);
-  border: 1px solid var(--border); background: var(--bg);
-  color: var(--text); font-size: 0.95rem; font-family: inherit;
-  transition: border 0.25s, box-shadow 0.25s; outline: none;
-}
-.form-group input:focus, .form-group textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(14,165,233,0.15); }
-.form-group textarea { resize: vertical; min-height: 120px; }
-.form-success { margin-top: 16px; text-align: center; color: #059669; font-size: 0.95rem; font-weight: 500; display: none; }
+
 
 /* ===== FOOTER ===== */
 .footer { background: var(--text); color: #94A3B8; padding: 60px 0 0; }
@@ -389,8 +375,6 @@ body {
   .tech-grid { grid-template-columns: 1fr 1fr; }
   .team-grid { grid-template-columns: repeat(2,1fr); }
   .usecases-grid { grid-template-columns: 1fr 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .contact-form { padding: 28px; }
   .footer-links { grid-template-columns: 1fr 1fr; }
   .flow-step { grid-template-columns: 60px 32px 1fr; }
   .step-num { font-size: 1.8rem; }
