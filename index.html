@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TactiSkin – Smart Textile Skin for Impact Mapping. Real-time pressure mapping for crash test dummies and helmet safety systems.">
-  <title>TactiSkin – Smart Textile Skin for Impact Mapping</title>
+  <meta name="description" content="6sens – Smart Textile Skin for Impact Mapping. Real-time pressure mapping for crash test dummies and helmet safety systems.">
+  <title>6sens – Smart Textile Skin for Impact Mapping</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
   <div class="nav-container">
     <a href="#hero" class="nav-logo">
       <span class="logo-icon">⬡</span>
-      <span class="logo-text">TactiSkin</span>
+      <span class="logo-text">6sens</span>
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#about">About</a>
@@ -29,10 +29,11 @@
 
     </div>
     <div class="nav-controls">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-        <span class="toggle-icon">
+      <button class="neon-icon-btn" id="themeToggle" aria-label="Explore">
+        <span class="neon-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3c.34 0 .67.02 1 .06" />
+            <polyline points="7 17 17 7" />
+            <polyline points="17 7 17 17 7 17" />
           </svg>
         </span>
       </button>
@@ -47,10 +48,8 @@
 <section id="hero" class="hero">
   <canvas id="meshCanvas"></canvas>
   <div class="hero-content">
-    <div class="hero-badge reveal">Smart Textile Technology</div>
     <h1 class="hero-headline reveal">
-      Revolutionizing<br>
-      <span class="gradient-text">Impact Intelligence</span><br>
+      Revolutionizing <span class="gradient-text">Impact Intelligence</span><br>
       with Smart Skin
     </h1>
     <p class="hero-sub reveal">Real-time pressure mapping for crash test dummies and helmet safety systems</p>
@@ -73,10 +72,10 @@
         <span class="stat-label">Impact Coverage</span>
       </div>
     </div>
-  </div>
-  <div class="hero-scroll-hint">
-    <span>Scroll to explore</span>
-    <div class="scroll-arrow"></div>
+    <div class="scroll-indicator reveal">
+      <p>Scroll to explore</p>
+      <div class="scroll-arrow"></div>
+    </div>
   </div>
 </section>
 
@@ -84,11 +83,11 @@
 <section id="about" class="section">
   <div class="container">
     <div class="section-label reveal">About the Product</div>
-    <h2 class="section-title reveal">What is <span class="gradient-text">TactiSkin</span>?</h2>
+    <h2 class="section-title reveal">What is <span class="gradient-text">6sens</span>?</h2>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>TactiSkin is a next-generation <strong>flexible textile-based smart sensing system</strong> designed to revolutionize how we understand and analyze impact forces in safety-critical applications.</p>
-        <p>By weaving <strong>conductive threads</strong> through a Velostat pressure-sensitive layer encased in Ecoflex silicone, TactiSkin creates an intelligent skin that feels, maps, and visualizes every impact in real time.</p>
+        <p>6sens is a next-generation <strong>flexible textile-based smart sensing system</strong> designed to revolutionize how we understand and analyze impact forces in safety-critical applications.</p>
+        <p>By weaving <strong>conductive threads</strong> through a Velostat pressure-sensitive layer encased in Ecoflex silicone, 6sens creates an intelligent skin that feels, maps, and visualizes every impact in real time.</p>
         <ul class="about-features">
           <li>
             <span class="feature-list-icon">
@@ -518,21 +517,21 @@
   <div class="container">
     <div class="section-label reveal">The Builders</div>
     <h2 class="section-title reveal">Meet <span class="gradient-text">TEXORA</span></h2>
-    <p class="section-sub reveal">The innovative minds behind TactiSkin</p>
+    <p class="section-sub reveal">The innovative minds behind 6sens</p>
     <div class="team-grid">
 
       <div class="team-card glass-card reveal">
-        <div class="team-avatar avatar-dd">
-          <span class="avatar-initials">DD</span>
+        <div class="team-avatar">
+          <img src="/images/durga.jpg" alt="Durga Devi profile photo">
         </div>
         <h3>Durga Devi</h3>
         <span class="team-role visionary">Visionary</span>
-        <p>Driving the product vision and strategic direction of TactiSkin</p>
+        <p>Driving the product vision and strategic direction of 6sens</p>
       </div>
 
       <div class="team-card glass-card reveal">
-        <div class="team-avatar avatar-dm">
-          <span class="avatar-initials">DM</span>
+        <div class="team-avatar">
+          <img src="/images/dhavashree.jpg" alt="Dhavashree profile photo">
         </div>
         <h3>Dhavashree</h3>
         <span class="team-role hustler">Hustler</span>
@@ -540,8 +539,8 @@
       </div>
 
       <div class="team-card glass-card reveal">
-        <div class="team-avatar avatar-yp">
-          <span class="avatar-initials">YP</span>
+        <div class="team-avatar">
+          <img src="/images/yokesh.jpg" alt="Yokeshwaran profile photo">
         </div>
         <h3>Yokeshwaran</h3>
         <span class="team-role hacker">Hacker</span>
@@ -549,17 +548,17 @@
       </div>
 
       <div class="team-card glass-card reveal">
-        <div class="team-avatar avatar-vr">
-          <span class="avatar-initials">VR</span>
+        <div class="team-avatar">
+          <img src="/images/vijayaragavan.jpg" alt="Vijayaragavan profile photo">
         </div>
         <h3>Vijayaragavan</h3>
         <span class="team-role designer">Designer</span>
-        <p>Crafting intuitive UI and the visual identity of the TactiSkin platform</p>
+        <p>Crafting intuitive UI and the visual identity of the 6sens platform</p>
       </div>
 
       <div class="team-card glass-card reveal">
-        <div class="team-avatar avatar-vb">
-          <span class="avatar-initials">VB</span>
+        <div class="team-avatar">
+          <img src="/images/vijaykumar.jpg" alt="Vijaykumar profile photo">
         </div>
         <h3>Vijaykumar</h3>
         <span class="team-role designer">Designer</span>
@@ -567,8 +566,8 @@
       </div>
 
       <div class="team-card glass-card reveal">
-        <div class="team-avatar avatar-js">
-          <span class="avatar-initials">JS</span>
+        <div class="team-avatar">
+          <img src="/images/janarthanan.jpg" alt="Janarthanan profile photo">
         </div>
         <h3>Janarthanan</h3>
         <span class="team-role hustler">Hustler</span>
@@ -585,7 +584,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <span class="logo-icon">⬡</span>
-        <span class="logo-text">TactiSkin</span>
+        <span class="logo-text">6sens</span>
         <p>Smart Textile Skin for Impact Mapping.<br>Revolutionizing safety through intelligent pressure sensing.</p>
       </div>
       <div class="footer-links">
@@ -610,8 +609,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 TactiSkin · TEXORA Team · All rights reserved</p>
-      <p>Built with ❤️ for safer tomorrows</p>
+      <p>© 2025 6sens · TEXORA Team · All rights reserved</p>
     </div>
   </div>
 </footer>
