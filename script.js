@@ -1,22 +1,13 @@
 /* ===== TACTISKIN – script.js ===== */
 
-/* ---------- THEME TOGGLE ---------- */
-const themeToggle = document.getElementById('themeToggle');
-const html = document.documentElement;
-const toggleIcon = themeToggle.querySelector('.toggle-icon');
-
-function setTheme(dark) {
-  html.setAttribute('data-theme', dark ? 'dark' : 'light');
-  toggleIcon.textContent = dark ? '☀️' : '🌙';
-  localStorage.setItem('ts-theme', dark ? 'dark' : 'light');
+/* ===== NEON ICON BUTTON ===== */
+const neonIconBtn = document.getElementById('themeToggle');
+if (neonIconBtn) {
+  neonIconBtn.addEventListener('click', () => {
+    // Scroll to demo section
+    document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+  });
 }
-
-const saved = localStorage.getItem('ts-theme');
-if (saved === 'dark') setTheme(true);
-
-themeToggle.addEventListener('click', () => {
-  setTheme(html.getAttribute('data-theme') !== 'dark');
-});
 
 /* ---------- HAMBURGER ---------- */
 const hamburger = document.getElementById('hamburger');
