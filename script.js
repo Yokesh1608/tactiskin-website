@@ -197,27 +197,39 @@ document.querySelectorAll('.team-avatar').forEach(av => {
     for (let c = 0; c < COLS; c++) {
       const cell = document.createElement('div');
       cell.className = 'heatmap-cell';
-      cell.addEventListener('mouseenter', () => { spread(r, c, 60); updateDisplay(); });
-      cell.addEventListener('click',      () => { spread(r, c, 90); updateDisplay(); });
+      
+      // Hover interaction: spread pressure from touched cell
+      cell.addEventListener('mouseenter', () => { 
+        spread(r, c, 70); 
+        updateDisplay(); 
+      });
+      
+      // Click interaction: stronger pressure burst
+      cell.addEventListener('click', () => { 
+        spread(r, c, 100); 
+        updateDisplay(); 
+      });
+      
+      // Touch support for mobile
+      cell.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        spread(r, c, 90);
+        updateDisplay();
+      });
+      
+      cell.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        spread(r, c, 60);
+        updateDisplay();
+      });
+      
       grid.appendChild(cell);
       cells.push(cell);
     }
   }
 
-  // Auto-demo: random ripples when idle
-  let idleTimer;
-  function startIdle() {
-    idleTimer = setInterval(() => {
-      const r = Math.floor(Math.random() * ROWS);
-      const c = Math.floor(Math.random() * COLS);
-      spread(r, c, 50);
-    }, 600);
-  }
-  function stopIdle() { clearInterval(idleTimer); }
-
-  grid.addEventListener('mouseenter', stopIdle);
-  grid.addEventListener('mouseleave', startIdle);
-  startIdle();
+  // Removed: Auto-demo random ripples
+  // The grid now responds ONLY to user interaction (hover, click, touch)
 
   // Continuous decay
   setInterval(decay, 60);
