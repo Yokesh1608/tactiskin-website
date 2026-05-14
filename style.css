@@ -408,9 +408,16 @@ body {
 .heatmap-cell {
   aspect-ratio: 1; border-radius: 6px;
   background: #BAE6FD; cursor: crosshair;
-  transition: background 0.2s, transform 0.1s;
+  transition: background 0.15s ease-out, transform 0.15s ease-out, box-shadow 0.15s ease-out;
+  position: relative;
 }
-.heatmap-cell:hover { transform: scale(1.15); z-index: 1; position: relative; }
+.heatmap-cell:hover { 
+  transform: scale(1.1); 
+  z-index: 1;
+}
+.heatmap-cell:active {
+  transform: scale(1.08);
+}
 
 .heatmap-scale { display: flex; align-items: center; gap: 12px; font-size: 0.8rem; color: var(--text-muted); }
 .scale-bar {
