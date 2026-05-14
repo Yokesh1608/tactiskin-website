@@ -131,6 +131,10 @@ body {
   position: relative; z-index: 2;
   text-align: center; padding: 40px 24px;
   max-width: 1000px; margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 60vh;
 }
 
 .hero-headline {
@@ -164,7 +168,7 @@ body {
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 48px;
+  margin-top: 48px;
 }
 
 .btn {
@@ -207,69 +211,6 @@ body {
 }
 
 .btn-full { width: 100%; justify-content: center; }
-
-.hero-stats {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
-}
-
-.stat { text-align: center; }
-.stat-num {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #22d3ee;
-}
-
-.stat-label {
-  font-size: 0.8rem;
-  color: #94a3b8;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.stat-divider {
-  width: 1px;
-  height: 40px;
-  background: rgba(34, 211, 238, 0.2);
-}
-
-.scroll-indicator {
-  position: relative;
-  margin-top: 50px;
-  text-align: center;
-  opacity: 0.7;
-  animation: float 2.5s ease-in-out infinite;
-}
-
-.scroll-indicator p {
-  font-size: 14px;
-  letter-spacing: 1px;
-  color: #94a3b8;
-  margin: 0 0 10px 0;
-}
-
-.scroll-arrow {
-  width: 20px;
-  height: 20px;
-  border-right: 2px solid #22d3ee;
-  border-bottom: 2px solid #22d3ee;
-  transform: rotate(45deg);
-  margin: 0 auto;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(8px);
-  }
-}
 
 /* ===== SECTIONS ===== */
 .section { padding: 100px 0; }
@@ -544,8 +485,6 @@ body {
   .footer-links { grid-template-columns: 1fr 1fr; }
   .flow-step { grid-template-columns: 60px 32px 1fr; }
   .step-num { font-size: 1.8rem; }
-  .hero-stats { margin-bottom: 40px; }
-  .scroll-indicator { margin-top: 30px; }
 }
 @media (max-width: 480px) {
   .hero-headline { font-size: 2rem; }
@@ -553,8 +492,6 @@ body {
   .team-grid { grid-template-columns: 1fr; }
   .usecases-grid { grid-template-columns: 1fr; }
   .footer-links { grid-template-columns: 1fr; }
-  .hero-stats { gap: 24px; margin-bottom: 30px; }
-  .scroll-indicator { margin-top: 25px; }
   .scroll-indicator p { font-size: 12px; }
   .heatmap-grid { max-width: 320px; gap: 3px; }
 }
