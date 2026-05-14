@@ -137,12 +137,15 @@ body {
   min-height: 60vh;
 }
 
-.hero-headline {
+.hero-title {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
   font-weight: 800;
   line-height: 1.05;
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
   color: #f1f5f9;
   margin-bottom: 16px;
 }
@@ -487,7 +490,7 @@ body {
   .step-num { font-size: 1.8rem; }
 }
 @media (max-width: 480px) {
-  .hero-headline { font-size: 2rem; }
+  .hero-title { font-size: 2rem; }
   .tech-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
   .usecases-grid { grid-template-columns: 1fr; }
