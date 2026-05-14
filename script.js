@@ -1,13 +1,23 @@
 /* ===== TACTISKIN – script.js ===== */
 
-/* ===== NEON ICON BUTTON ===== */
-const neonIconBtn = document.getElementById('themeToggle');
-if (neonIconBtn) {
-  neonIconBtn.addEventListener('click', () => {
-    // Scroll to demo section
-    document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
-  });
+/* ---------- THEME TOGGLE ---------- */
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+const toggleIcon = themeToggle.querySelector('.toggle-icon');
+
+function setTheme(dark) {
+  html.setAttribute('data-theme', dark ? 'dark' : 'light');
+  toggleIcon.innerHTML = dark 
+    ? '<svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>' 
+    : '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
 }
+
+const saved = localStorage.getItem('ts-theme');
+if (saved === 'dark') setTheme(true);
+
+themeToggle.addEventListener('click', () => {
+  setTheme(html.getAttribute('data-theme') !== 'dark');
+});
 
 /* ---------- HAMBURGER ---------- */
 const hamburger = document.getElementById('hamburger');
