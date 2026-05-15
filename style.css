@@ -168,6 +168,16 @@ html[data-theme="light"] .gradient-text,
   background-clip: text;
 }
 
+html[data-theme="light"] .hero,
+[data-theme="light"] .hero {
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9, #e0f2fe);
+}
+
+html[data-theme="light"] #meshCanvas,
+[data-theme="light"] #meshCanvas {
+  opacity: 0.05;
+}
+
 .hero-sub {
   font-size: 1.05rem;
   color: #cbd5e1;
@@ -435,6 +445,17 @@ html[data-theme="light"] .gradient-text,
   object-fit: cover;
   display: block;
   border-radius: 50%;
+}
+.avatar-letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #38bdf8, #06b6d4);
 }
 .team-avatar:hover {
   transform: scale(1.04);
