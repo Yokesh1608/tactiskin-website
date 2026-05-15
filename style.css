@@ -5,9 +5,9 @@
   --primary: #0EA5E9;
   --primary-dark: #0284C7;
   --primary-light: #BAE6FD;
-  --bg: #A5D6A7;
-  --bg-alt: #81C784;
-  --bg-glass: rgba(165,214,167,0.8);
+  --bg: #FFFFFF;
+  --bg-alt: #F1F5F9;
+  --bg-glass: rgba(255,255,255,0.7);
   --text: #0F172A;
   --text-muted: #64748B;
   --border: rgba(14,165,233,0.15);
@@ -170,7 +170,7 @@ html[data-theme="light"] .gradient-text,
 
 html[data-theme="light"] .hero,
 [data-theme="light"] .hero {
-  background: linear-gradient(135deg, #A5D6A7, #81C784, #66BB6A);
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9, #e0f2fe);
 }
 
 html[data-theme="light"] #meshCanvas,
@@ -180,7 +180,7 @@ html[data-theme="light"] #meshCanvas,
 
 html[data-theme="light"] .nav-links a,
 [data-theme="light"] .nav-links a {
-  color: #0f172a !important;
+  color: #64748B !important;
   font-weight: 700;
 }
 
