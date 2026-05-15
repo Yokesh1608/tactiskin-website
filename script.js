@@ -56,7 +56,9 @@ revealEls.forEach(el => revealObs.observe(el));
 document.querySelectorAll('.team-avatar').forEach(av => {
   const color = av.dataset.color || '#0EA5E9';
   av.style.background = `linear-gradient(135deg, ${color}, ${color}99)`;
-  av.textContent = av.dataset.initials || '?';
+  if (!av.querySelector('img')) {
+    av.textContent = av.dataset.initials || '?';
+  }
 });
 
 /* ---------- MESH CANVAS ANIMATION ---------- */
