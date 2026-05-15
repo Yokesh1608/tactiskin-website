@@ -52,15 +52,6 @@ const revealObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 revealEls.forEach(el => revealObs.observe(el));
 
-/* ---------- TEAM AVATAR COLORS ---------- */
-document.querySelectorAll('.team-avatar').forEach(av => {
-  const color = av.dataset.color || '#0EA5E9';
-  av.style.background = `linear-gradient(135deg, ${color}, ${color}99)`;
-  if (!av.querySelector('img')) {
-    av.textContent = av.dataset.initials || '?';
-  }
-});
-
 /* ---------- MESH CANVAS ANIMATION ---------- */
 (function initMesh() {
   const canvas = document.getElementById('meshCanvas');
