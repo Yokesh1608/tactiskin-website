@@ -5,9 +5,9 @@
   --primary: #0EA5E9;
   --primary-dark: #0284C7;
   --primary-light: #BAE6FD;
-  --bg: #FFFFFF;
-  --bg-alt: #F1F5F9;
-  --bg-glass: rgba(255,255,255,0.7);
+  --bg: #A5D6A7;
+  --bg-alt: #81C784;
+  --bg-glass: rgba(165,214,167,0.8);
   --text: #0F172A;
   --text-muted: #64748B;
   --border: rgba(14,165,233,0.15);
@@ -70,7 +70,7 @@ body {
 }
 .nav-links a {
   text-decoration: none; color: var(--text-muted);
-  font-size: 0.9rem; font-weight: 500; padding: 8px 14px;
+  font-size: 0.9rem; font-weight: 700; padding: 8px 14px;
   border-radius: var(--radius-sm); transition: all 0.25s;
   position: relative;
 }
@@ -170,12 +170,18 @@ html[data-theme="light"] .gradient-text,
 
 html[data-theme="light"] .hero,
 [data-theme="light"] .hero {
-  background: linear-gradient(135deg, #f8fafc, #f1f5f9, #e0f2fe);
+  background: linear-gradient(135deg, #A5D6A7, #81C784, #66BB6A);
 }
 
 html[data-theme="light"] #meshCanvas,
 [data-theme="light"] #meshCanvas {
   opacity: 0.05;
+}
+
+html[data-theme="light"] .nav-links a,
+[data-theme="light"] .nav-links a {
+  color: #0f172a !important;
+  font-weight: 700;
 }
 
 .hero-sub {
@@ -477,6 +483,16 @@ html[data-theme="light"] #meshCanvas,
 .team-role.hustler { background: rgba(124,58,237,0.12); color: #7C3AED; }
 .team-role.hacker { background: rgba(220,38,38,0.12); color: #DC2626; }
 .team-role.designer { background: rgba(217,119,6,0.12); color: #D97706; }
+.team-linkedin {
+  display: inline-block; padding: 4px 14px; border-radius: 50px;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 12px;
+  background: rgba(0,119,181,0.12); color: #0077B5; text-decoration: none;
+  transition: all 0.3s ease;
+}
+.team-linkedin:hover {
+  background: rgba(0,119,181,0.25); color: #0077B5;
+  text-decoration: none;
+}
 .team-card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; }
 
 
