@@ -427,7 +427,6 @@ html[data-theme="light"] .gradient-text,
   overflow: hidden;
   border: 3px solid rgba(14,165,233,0.8);
   box-shadow: 0 0 30px rgba(56,189,248,0.35);
-  background: #08121f;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .team-avatar img {
@@ -435,6 +434,7 @@ html[data-theme="light"] .gradient-text,
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 50%;
 }
 .team-avatar:hover {
   transform: scale(1.04);
