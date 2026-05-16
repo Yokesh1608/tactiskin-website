@@ -175,7 +175,7 @@ html[data-theme="light"] .hero,
 
 html[data-theme="light"] #meshCanvas,
 [data-theme="light"] #meshCanvas {
-  opacity: 0.05;
+  opacity: 100%;
 }
 
 html[data-theme="light"] .nav-links a,
