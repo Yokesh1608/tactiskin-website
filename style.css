@@ -549,6 +549,14 @@ html[data-theme="light"] .nav-links a,
   background: rgba(0,119,181,0.25); color: #0077B5;
   text-decoration: none;
 }
+.team-linkedin.team-disabled {
+  background: rgba(148, 163, 184, 0.12);
+  color: #94A3B8;
+  cursor: not-allowed;
+}
+.team-linkedin.team-disabled:hover {
+  background: rgba(148, 163, 184, 0.12);
+}
 .team-card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; }
 
 
